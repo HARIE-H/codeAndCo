@@ -4,116 +4,117 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/nav-img.png" type="image/x-icon">
+    <link rel="icon" href="img/nav-img.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>code&co</title>
 </head>
+
 <body>
 
   <div class="wrapper">
    <header>
-     <a href="#code&co" class="logo"><img src="img/nav-img.png" alt="code&co-logo" width= "75" height= "44"></a>
-       <ul>
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#about">ABOUT US</a></li>
-          <li><a href="#service">SERVICES</a></li>
-          <li><a href="#product">PRODUCTS</a></li>
-          <li><a href="#pricing">PRICING</a></li>
-          <li><a href="#api">API</a></li>
-          <li><a href="#support" class="active">SUPPORT</a></li>
-          <li><a href="#contact">CONTACTS</a></li>
-       </ul> 
-       <a href="#" class="btn blue-btn">TRY NOW</a>  
+     <nav class="nav__bar">
+        <a href="#code&co" class="logo"><img class="logo__img" src="img/nav-img.png" alt="code&co-logo" width= "75" height= "44"></a>
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home">HOME</a></li>
+          <li class="nav__item"><a href="#about">ABOUT US</a></li>
+          <li class="nav__item"><a href="#service">SERVICES</a></li>
+          <li class="nav__item"><a href="#product">PRODUCTS</a></li>
+          <li class="nav__item"><a href="#pricing">PRICING</a></li>
+          <li class="nav__item"><a href="#api">API</a></li>
+          <li class="nav__item"><a href="#support">SUPPORT</a></li>
+          <li class="nav__item"><a href="#contact">CONTACTS</a></li>
+        </ul> 
+        <a href="#try-now" class="btn btn__right">TRY NOW</a>  
+     </nav>
    </header>
 
    <section>
-      <div class="bg-img">
+      <div class="bg__img">
          <h1 class="head">Get help about our products, basic knowledge and more</h1>
          <div class="search__box">
-           <input type="search" name="user__input" id ="user__input" placeholder="Search for features, basic knowledge or options…">
-           <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+           <input type="search" name="user-input" id ="user-input" class="search__input" 
+            placeholder="Search for features, basic knowledge or options…">   
+            <a href="#search" class="search__btn"><i class="fa fa-search" aria-hidden="true"></i></a>
          </div>
       </div>
    </section>
 
-   <section>
+   <section class="box__container">
       <div class="box__wrapper">
-        <div class="box">
-          <figure>
+        <article class="box">
+          <figure class="box__img">
             <img src="img/book.png" alt="book">
           </figure>
-          <h2>General</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
-        </div>
-        <div class="box">
-          <figure>
-            <img src="img/installation.png" alt="book">
+          <h2 class="box__head">General</h2>
+          <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
+        </article>
+        <article class="box">
+          <figure class="box__img">
+            <img src="img/installation.png" alt="installation">
           </figure>
-          <h2>Implementation</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
-        </div>
-        <div class="box">
-          <figure>
-            <img src="img/tutorial.png" alt="book">
+          <h2 class="box__head">Implementation</h2>
+          <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
+        </article>
+        <article class="box">
+          <figure class="box__img">
+            <img src="img/tutorial.png" alt="tutorial">
           </figure>
-          <h2>Tutorial</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
-        </div>
-        <div class="box">
-          <figure>
-            <img src="img/basic-knowledge.png" alt="book">
+          <h2 class="box__head">Tutorial</h2>
+          <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
+        </article>
+        <article class="box">
+          <figure class="box__img">
+            <img src="img/basic-knowledge.png" alt="basic knowledge">
           </figure>
-          <h2>Basic Knowledge</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
-        </div>
-        <div class="box">
-          <figure>
-            <img src="img/gear.png" alt="book">
+          <h2 class="box__head">Basic Knowledge</h2>
+          <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
+        </article>
+        <article class="box">
+          <figure class="box__img">
+            <img src="img/gear.png" alt="gear">
           </figure>
-          <h2>How-to</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
-        </div>
-        <div class="box">
-          <figure>
-            <img src="img/api.png" alt="book">
+          <h2 class="box__head">How-to</h2>
+          <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
+        </article>
+        <article class="box">
+          <figure class="box__img">
+            <img src="img/api.png" alt="api">
           </figure>
-          <h2>API Reference</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
-        </div>
-        <div class="box">
-          <figure>
-            <img src="img/trubleshhoting.png" alt="book">
+          <h2 class="box__head">API Reference</h2>
+          <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
+        </article>
+        <article class="box">
+          <figure class="box__img">
+            <img src="img/trubleshhoting.png" alt="Troubleshooting">
           </figure>
-          <h2>Troubleshooting</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
-        </div>
-        <div class="box">
-          <figure>
-            <img src="img/costume-service.png" alt="book">
+          <h2 class="box__head">Troubleshooting</h2>
+          <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
+        </article>
+        <article class="box">
+          <figure class="box__img">
+            <img src="img/costume-service.png" alt="customer service">
           </figure>
-          <h2>Customer service</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
-        </div>
+          <h2 class="box__head">Customer service</h2>
+          <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
+        </article>
       </div>
       <div class="clearfix"></div>
    </section>
 
    <footer>
      <div class="foot">
-       <h2>Didn’t find what you are looking for?</h2>
-       <h3>Don’t worry! Let’s chat with US</h3>
-       <div style="width:inherit;text-align: center;margin-top: 58px;">
-         <a href="#" class="btn blue__btn__center">REQUEST A CHAT</a>
-       </div>
+       <h2 class="foot__head">Didn’t find what you are looking for?</h2>
+       <h3 class="foot__sub__head">Don’t worry! Let’s chat with US</h3>
+       <a href="#chat" class="btn btn__center">REQUEST A CHAT</a>
        <div class="sub__foot">
-         <a href="#" class="top-of-site">^</a>
-         <p>Copyright 2018 Code&CO ©. All rights Reserved</p>
+         <p class="sub__foot__content">Copyright 2018 Code&CO ©. All rights Reserved</p>
        </div>
      </div>
    </footer>
-
+   <a href="#" class="push__top" title="back to top">^</a>
   </div>
 
 </body>

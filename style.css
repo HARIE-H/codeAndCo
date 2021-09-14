@@ -1,4 +1,3 @@
-/*  resetting user-agent-stylesheet  */
 *{
     margin: 0;
     padding: 0;
@@ -6,135 +5,164 @@
     box-sizing: border-box;
 }
 
-/* web page layout */
-body{
-    background-color: #f3f2ef;
-}
-
 .wrapper{
     max-width: 1440px;
     margin: auto;
-    position: relative;
 }
 
 /* nav-bar styling*/
-header{
+.nav__bar{
     position: absolute;
+    top: 0;
+    left: 0; 
     z-index: 1;
     width: 100%;
-    height: 68px;
     padding: 12px 40px;
     background-color: rgba(136, 136, 136, 0.5);
+    text-align: center;
 }
 
 .logo{
-    float:left;
-    display: inline-block;
-    width:75px; 
-    height:44px;
+    float: left;
 }
 
-a.logo::after{
-    content: "";
-    clear: both;
-    display: table; 
+.logo .logo__img{
+    display: block;
 }
-ul{
+
+.nav__bar .nav__list{
     display: inline-block;
     list-style: none;
-    margin: 12px 0px 12px 15%;
+    font-size: 0;
+    padding: 12px 0px;
 }
 
-li{
+.nav__list .nav__item{
     display: inline-block;
-    margin: 0px 20px;
+    margin: 0px 10px;
 }
 
-li a{
+.nav__item a{
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
+    padding: 5px;
     color:#ffffff;
 }
 
-a.active{
-    color:black; 
-    font-weight: 600;
+.nav__item a:hover{
+    background-color: #2086fb;
+    border-radius: 10px;
+    transition: 0.1s ease;
 }
 
-.blue-btn{  
-    float: right;
-    padding: 11px 30px;
+.nav__item a:focus{
+    color:black; 
 }
 
 .btn{
     background-color: #2086fb; 
     color: #ffffff;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 15px;
-    border-radius: 22px;
+    border-radius: 25px;
     text-decoration: none;
 }
 
-/* top container styling */
-.bg-img{
-    width:100%; 
-    height:568px;
-    background: url('img/bg_computer.png');
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: top;
-    background-size: cover;
-    position: relative;
-
+.btn__right{  
+    float: right;
+    padding: 11px 30px;
 }
 
-.bg-img::after{
+.btn:hover{
+    background-color: #fff;
+    color: black;
+}
+
+/* bg container styling */
+.bg__img{
+    width:100%; 
+    height:568px;
+    background: url('img/bg_computer.png') no-repeat scroll top;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg__img::after{
+    position: absolute;
+    top: 0;
+    left: 0;
     content: "";
     display: block;
     width: 100%;
-    height: inherit;
+    height: 568px;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-h1.head{
-    position: absolute;
+.bg__img .head{
+    position: relative;
+    z-index: 1;
     font-weight: 600;
     font-size: 30px;
     color: white;
-    width: 100%;
     text-align: center;
-    top: 215px;
+    margin: 215px 0 24px;
 }
 
-.search__box{
-    position: absolute;
-    left: 257px;
-    top: 286px;  
-    z-index: 2;
-    width: 926px;
+.bg__img .search__box{
+    position: relative;
+    z-index: 1;
+    width: 65%;
+    margin: auto;
     background-color:white;
     height: 64px;
     border: 5px solid rgba(136, 136, 136, 0.5);
     border-radius: 4px;
 }
 
-input[type="search"]{
+.bg__img .search__input{
     color: #9b9b9b;
-    width: 850px;
+    width: 93%;
     border: none;
-    padding: 19px;
+    font-size: 16px;
+    padding: 16px;
+    outline: none;
 }
     
-.search__box i{
+.search__box .search__btn{
+    display: inline-block;
     color:#4a4a4a50;
-    padding-left: 15px;
 }
 
-/* middle container styling */
-.box__wrapper{
-    width: 100%;
+.search__box .search__btn i{
+    display: inline-block;
+    padding: 19px 27px 19px 18px;
+}
+
+.search__btn i:hover{
+    background-color:rgba(136, 136, 136, 0.5);
+    color: rgb(68, 68, 68);
+}
+
+.search__box:focus-within{
+    border: 5px solid #2086fb90;
+    box-shadow: 0 0 50px rgb(0, 0, 0);
+    transition: all 0.1 ease;
+}
+
+.search__box:focus-within .search__btn{
+    background-color:rgba(136, 136, 136, 0.5);
+    color: rgb(68, 68, 68);
+}
+.search__input:focus::placeholder{
+    color: transparent;
+}
+
+/* box-container styling */
+.box__container{
     text-align: center;
+    margin: 41px 0 32px;
 }
 
 .box__wrapper .box{
@@ -144,17 +172,29 @@ input[type="search"]{
     background-color:#fff;
     border-right: 1px solid #dcdcdc;
     border-bottom: 1px solid #dcdcdc;
-    padding-top: 52px;
+    padding: 52px 0 60px;
 }
 
-.box h2{
+.box:nth-child(4), .box:nth-child(8){
+    border-right: none;
+}
+.box:nth-child(5), .box:nth-child(6),
+.box:nth-child(7), .box:nth-child(8){
+    border-bottom: none;
+}
+
+.box .box__img{
+    display: inline-block;
+}
+
+.box .box__head{
     font-weight: 600;
     font-size:18px;
     color: #4a4a4a;
     margin-top: 24px;
 }
 
-.box p{
+.box .box__content{
     margin: 10px 32px;
     font-weight: normal;
     font-size: 16px;
@@ -168,63 +208,61 @@ input[type="search"]{
     display: block;
 }
 
-/* bottom container styling */
+/* footer styling */
 .foot{
-    position: relative;
-    width: inherit;
-    height: 356px;
+    text-align: center;
+    overflow: hidden;
     background-color: #323232;
 }
 
-.foot h2, h3{
-    width: inherit;
-    text-align: center;
+.foot .foot__head, .foot__sub__head{
     color: white;
 }
 
-.foot h2{
-    padding-top: 62px;
+.foot .foot__head{
+    margin-top: 62px;
     font-style: normal;
     font-weight: 600;
     font-size: 30px;
 }
 
-.foot h3{
+.foot .foot__sub__head{
     font-weight: 500;
     font-size: 16px;
     padding-top: 4px;
+    margin-bottom: 58px;
 }
 
-.blue__btn__center{
+.btn__center{
     padding: 10px 46px 12px 46px;
+    display: inline-block;
+    margin-bottom: 81px;
 }
 
 .sub__foot{
     width: 100%;
     height: 68px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
     z-index: 1;
     background-color:#252525;
 }
 
-.sub__foot p{
+.sub__foot .sub__foot__content{
+    float: left;;
     color:#ffffff;
     font-style: normal;
     font-size: 14px;
     font-weight: 300;
     margin-left: 40px;
-    padding-top: 25px;
+    padding: 25px 0 24px;
 }
 
-.top-of-site{
-    float: right;
-    margin-right: 44px;
-    text-align: center;
-    width: 28px;
-    height: 28px;
+.push__top{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
     font-size: 20px;
+    width: 25px;
+    text-align: center;
     background-color:#4a4a4a;
     color: #979797;
 }
