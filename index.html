@@ -12,13 +12,16 @@
 </head>
 
 <body>
-   <header class="header">
-        <input type="checkbox" id="check" />
-        <label for="check">
-          <i class="fa fa-bars" aria-hidden="true" id="bar"></i>
-          <i class="fa fa-times" aria-hidden="true" id="cancel"></i>
-        </label>
-
+   <header class="header clearfix">
+      <div class="wrapper">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
         <a href="/code&co/logo" class="header__logo"><img class="header__logo__img" src="img/nav-img.png" alt="code&co-logo" width= "75" height= "44"></a>
         <ul class="header__nav">
           <li class="header__nav__item"><a href="#home">HOME</a></li>
@@ -31,84 +34,107 @@
           <li class="header__nav__item"><a href="#contact">CONTACTS</a></li>
         </ul> 
         <a href="#try-now" class="header--btn-right btn">TRY NOW</a>  
+      </div>
    </header>
 
    <section class="hero">
-         <h1 class="hero__title">Get help about our products, basic knowledge and more</h1>
-         <div class="hero__container">
-          <input type="search" name="user-input" id ="user-input" class="hero__container__search" 
-            placeholder="Search for features, basic knowledge or options…"/>   
-          <button type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
-         </div>
+      <div class="hero__wrapper">
+        <article>
+          <h1 class="hero__title">Get help about our products, basic knowledge and more</h1>
+          <div class="hero__container">
+            <input type="search" name="user-input" id ="user-input" class="hero__container__search" 
+               placeholder="Search for features, basic knowledge or options…"/>   
+            <button type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+          </div>
+        </article>
+      </div>
    </section>
 
    <section class="box__wrapper">
         <article class="box">
           <figure class="box__img">
             <img src="img/book.png" alt="book">
-          </figure>
-          <h2 class="box__title">General</h2>
-          <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
+            <figcaption>
+              <h2 class="box__title">General</h2>
+              <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
+            </figcaption>
+           </figure>
         </article>
         <article class="box">
           <figure class="box__img">
             <img src="img/installation.png" alt="installation">
-          </figure>
-          <h2 class="box__title">Implementation</h2>
-          <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
+            <figcaption>
+              <h2 class="box__title">Implementation</h2>
+               <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
+            </figcaption>
+          </figure>   
         </article>
         <article class="box">
           <figure class="box__img">
             <img src="img/tutorial.png" alt="tutorial">
-          </figure>
-          <h2 class="box__title">Tutorial</h2>
-          <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
+            <figcaption>
+              <h2 class="box__title">Tutorial</h2>
+              <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
+            </figcaption>
+          </figure>    
         </article>
         <article class="box">
           <figure class="box__img">
             <img src="img/basic-knowledge.png" alt="basic knowledge">
-          </figure>
-          <h2 class="box__title">Basic Knowledge</h2>
-          <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
+            <figcaption>
+              <h2 class="box__title">Basic Knowledge</h2>
+              <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
+            </figcaption>
+          </figure>         
         </article>
         <article class="box">
           <figure class="box__img">
             <img src="img/gear.png" alt="gear">
-          </figure>
-          <h2 class="box__title">How-to</h2>
+            <figcaption>
+              <h2 class="box__title">How-to</h2>
           <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
+            </figcaption>
+          </figure>        
         </article>
         <article class="box">
           <figure class="box__img">
             <img src="img/api.png" alt="api">
+            <figcaption>
+              <h2 class="box__title">API Reference</h2>
+              <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
+            </figcaption>
           </figure>
-          <h2 class="box__title">API Reference</h2>
-          <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
         </article>
         <article class="box">
           <figure class="box__img">
             <img src="img/trubleshhoting.png" alt="Troubleshooting">
-          </figure>
-          <h2 class="box__title">Troubleshooting</h2>
+            <figcaption>
+              <h2 class="box__title">Troubleshooting</h2>
           <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
+            </figcaption>
+          </figure>
         </article>
         <article class="box">
           <figure class="box__img">
             <img src="img/costume-service.png" alt="customer service">
+            <figcaption>
+              <h2 class="box__title">Customer service</h2>
+              <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
+            </figcaption>
           </figure>
-          <h2 class="box__title">Customer service</h2>
-          <p class="box__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo </p>
         </article>
         <div class="clearfix"></div>
    </section>
 
    <footer class="foot">
-       <h2 class="foot__title">Didn’t find what you are looking for?</h2>
-       <h3 class="foot__title__sub">Don’t worry! Let’s chat with US</h3>
-       <a href="#chat" class="foot--btn-center btn">REQUEST A CHAT</a>
-       <div class="foot__sub">
-         <p class="foot__sub__content">Copyright 2021 Code&CO &#9400. All rights Reserved</p>
-       </div>
+      <div class="foot__wrapper">
+        <h2 class="foot__title">Didn’t find what you are looking for?</h2>
+        <h3 class="foot__title__sub">Don’t worry! Let’s chat with US</h3>
+        <a href="#chat" class="foot--btn-center btn">REQUEST A CHAT</a>
+      </div>
+      <div class="foot__sub">
+        <p class="foot__sub__content">Copyright 2021 Code&CO &#9400. All rights Reserved</p>
+      </div>
    </footer>
    <button onclick='window.scrollTo({top: 0, behavior: "smooth"});' class="to__top">^</button>
 
